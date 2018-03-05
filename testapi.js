@@ -6,9 +6,12 @@ var songs = ["Strawberry Fields Forever", "Blackbird", "Hey, Jude", "When You We
   
 
   // Creating an AJAX call for the specific movie button being clicked
+  
   $.ajax({
     url: queryURL,
-    method: "GET"
+    method: "GET",
+    crossDomain: true,
+    dataType: 'jsonp',
   }).then(function(response) {
     console.log(response);
 
